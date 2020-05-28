@@ -5,7 +5,6 @@ import android.content.ContentUris;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.CalendarContract;
-import androidx.annotation.Nullable;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,7 +21,6 @@ public class Utils {
   }
 
   // inspired by http://stackoverflow.com/questions/9761584/how-can-i-find-out-the-result-of-my-calendar-intent
-  @Nullable
   static Long extractLastEventId(Cursor cursor) {
     Long lastEventId = null;
 

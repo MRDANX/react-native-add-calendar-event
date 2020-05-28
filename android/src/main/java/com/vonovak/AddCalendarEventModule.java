@@ -12,7 +12,6 @@ import android.provider.CalendarContract;
 import android.app.LoaderManager;
 import android.content.Loader;
 import android.util.Log;
-import androidx.annotation.Nullable;
 
 import com.facebook.react.bridge.*;
 
@@ -209,7 +208,7 @@ public class AddCalendarEventModule extends ReactContextBaseJavaModule implement
         destroyLoader(loader);
     }
 
-    private void returnResultBackToJS(@Nullable Long eventPostId) {
+    private void returnResultBackToJS(Long eventPostId) {
         if (promise == null) {
             Log.e(ADD_EVENT_MODULE_NAME, "promise is null");
             return;
