@@ -12,7 +12,7 @@ import java.util.TimeZone;
 
 public class Utils {
 
-  static final String DATE_PARSING_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+  static final String DATE_PARSING_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
 
   static long getTimestamp(String dateAsString) throws ParseException {
     SimpleDateFormat datetimeFormatter = new SimpleDateFormat(DATE_PARSING_FORMAT);
