@@ -28,6 +28,12 @@ declare module "react-native-add-calendar-event" {
      */
     notes?: string;
     navigationBarIOS?: NavigationBarIOS;
+
+    /**
+     * The minutes prior to the event that the alarm should ring.
+     * iOS only
+     */
+    alarm?: number;
   }
 
   /**
@@ -103,5 +109,4 @@ declare module "react-native-add-calendar-event" {
   export function presentEventViewingDialog(
     options: ViewOptions
   ): Promise<ViewResult>;
-
 }

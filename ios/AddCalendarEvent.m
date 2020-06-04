@@ -52,6 +52,7 @@ static NSString *const _endDate = @"endDate";
 static NSString *const _notes = @"notes";
 static NSString *const _url = @"url";
 static NSString *const _allDay = @"allDay";
+static NSString *const _alarm = @"alarm";
 
 static NSString *const MODULE_NAME= @"AddCalendarEvent";
 
@@ -263,6 +264,9 @@ RCT_EXPORT_METHOD(presentEventEditingDialog:(NSDictionary *)options resolver:(RC
     }
     if (options[_allDay]) {
         event.allDay = [RCTConvert BOOL:options[_allDay]];
+    }
+    if(options[_alarm]){
+        [event addAlarm:[EKAlarm alarmWithRelativeOffset:[RCTConvert int:options[_alarm]]*60]];
     }
     return event;
 }
